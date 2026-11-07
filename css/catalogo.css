@@ -1,0 +1,43 @@
+/* Pestañas de categoría (una por hoja del Google Sheet) */
+.catalogo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.tab-btn {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid #ddd;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  border-color: #999;
+}
+
+.tab-btn--active {
+  background: #222;
+  border-color: #222;
+  color: #fff;
+}
+
+/* Estados del grid */
+.catalogo-cargando,
+.catalogo-error,
+.catalogo-vacio {
+  font-family: "Baloo 2", sans-serif;
+  padding: 2rem 0;
+  grid-column: 1 / -1;
+}
+
+.catalogo-error {
+  color: #b00020;
+}

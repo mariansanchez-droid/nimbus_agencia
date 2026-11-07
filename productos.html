@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimbus Agencia Creativa - Productos</title>
+
+  <!-- Fuente redondeada/bold similar a la del diseño original -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/productos.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+
+  <script src="Javascript/components.js"></script>
+</head>
+
+    <header>
+      <div id="header"></div>
+    </header>
+
+<body>
+
+  <!-- ================================================= -->
+  <!-- SECCIÓN DE PRODUCTOS -->
+  <!-- Las pestañas de categoría se generan dinámicamente -->
+  <!-- a partir de cada HOJA del Google Sheet. El grid se -->
+  <!-- llena en tiempo real desde catalogo.js.             -->
+  <!-- ================================================= -->
+  <section class="productos">
+
+    <!-- Pestañas de categoría (una por cada hoja del Google Sheet) -->
+    <nav id="catalogo-tabs" class="catalogo-tabs" aria-label="Categorías de productos"></nav>
+
+    <div class="productos__grid">
+      <p class="catalogo-cargando">Cargando productos...</p>
+    </div>
+
+  </section>
+
+  <script src="Javascript/catalogo.js" defer></script>
+
+</body>
+
+  <footer>
+      <div id="footer"></div>
+    </footer>
+
+</html>

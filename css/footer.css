@@ -1,0 +1,243 @@
+/* ============================================
+   RESET BÁSICO
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo 2', sans-serif;
+  background-color: #ffffff;
+}
+
+/* ============================================
+   VARIABLES DE COLOR
+   Misma paleta usada en el resto del sitio,
+   para mantener consistencia visual.
+============================================ */
+:root {
+  --color-rosa: #ff5ca8;         /* Rosa de los títulos de columna y del ícono de teléfono */
+  --color-naranja: #ffa500;      /* Naranja del texto "Nimbus" en el copyright */
+  --color-texto-oscuro: #1c1c3a; /* Azul/negro casi marino usado en los enlaces */
+  --color-texto-gris: #555566;   /* Gris para textos secundarios (horarios, copyright) */
+  --color-fondo-footer: #f4f4f6; /* Gris muy claro de fondo del footer */
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL DEL FOOTER
+============================================ */
+.footer {
+  width: 100%;
+  background-color: var(--color-fondo-footer);
+  border-radius: 24px;      /* Esquinas redondeadas como en la imagen */
+  padding: 40px 50px 24px;
+}
+
+/* ============================================
+   FILA SUPERIOR: logo + columnas
+============================================ */
+.footer__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   ESPACIO RESERVADO PARA EL LOGO
+============================================ */
+.logo-placeholder {
+  width: 220px;   /* Ajustar según el ancho real del logo */
+  height: 90px;   /* Ajustar según el alto real del logo (incluye texto "Agencia Creativa") */
+  flex-shrink: 0;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* ============================================
+   COLUMNAS GENÉRICAS (Navegación / Servicios)
+============================================ */
+.footer__col {
+  min-width: 150px;
+}
+
+.footer__heading {
+  color: var(--color-rosa);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.footer__heading--center {
+  text-align: center;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--color-texto-oscuro);
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: var(--color-rosa);
+}
+
+/* ============================================
+   COLUMNA DE CONTACTO
+============================================ */
+.footer__col--contact {
+  min-width: 220px;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.footer__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-rosa);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer__contact-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: var(--color-texto-gris);
+  line-height: 1.5;
+}
+
+.footer__phone {
+  color: var(--color-texto-oscuro);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ============================================
+   COLUMNA "SÍGUENOS" (redes sociales)
+============================================ */
+.footer__col--social {
+  min-width: 160px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: var(--color-rosa);
+  color: #ffffff;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social__link:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-texto-oscuro);
+}
+
+.social__link svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================
+   LÍNEA DE COPYRIGHT
+============================================ */
+.footer__bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer__copy {
+  font-size: 13px;
+  color: var(--color-texto-gris);
+}
+
+.footer__copy-brand {
+  color: var(--color-naranja);
+  font-weight: 700;
+}
+
+/* ============================================
+   RESPONSIVE: TABLETS
+============================================ */
+@media (max-width: 992px) {
+  .footer {
+    padding: 36px 30px 20px;
+  }
+
+  .footer__top {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-placeholder {
+    margin: 0 auto;
+  }
+
+  .footer__heading {
+    text-align: center;
+  }
+
+  .footer__list {
+    align-items: center;
+  }
+
+  .footer__contact-item {
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: MÓVILES
+============================================ */
+@media (max-width: 600px) {
+  .footer {
+    border-radius: 16px;
+    padding: 30px 20px 18px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .footer__col,
+  .footer__col--contact,
+  .footer__col--social {
+    width: 100%;
+  }
+}

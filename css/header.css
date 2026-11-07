@@ -1,0 +1,205 @@
+/* ============================================
+   RESET BÁSICO
+   Elimina márgenes/paddings por defecto del navegador
+   y unifica el modelo de caja para todos los elementos.
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo 2', sans-serif; /* Fuente redondeada similar al diseño original */
+  background-color: #ffffff;
+}
+
+/* ============================================
+   VARIABLES DE COLOR
+   Centralizamos la paleta para reutilizarla
+   fácilmente y facilitar cambios futuros.
+============================================ */
+:root {
+  --color-rosa: #ff5ca8;       /* Rosa del subrayado "INICIO" y del botón CTA */
+  --color-rosa-oscuro: #ff3d9a;/* Rosa más intenso para hover/sombra del botón */
+  --color-texto-oscuro: #1c1c3a; /* Azul/negro casi marino usado en el texto del menú */
+  --color-gris-sombra: rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL DEL HEADER
+============================================ */
+.header {
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   ESPACIO RESERVADO PARA EL LOGO
+   Se deja un ancho/alto fijo para que, al insertar
+   la imagen del logo, la barra no cambie de tamaño.
+============================================ */
+.logo-placeholder {
+  width: 220px;   /* Ajustar según el ancho real del logo */
+  height: 70px;   /* Ajustar según el alto real del logo */
+  flex-shrink: 0; /* Evita que se comprima cuando el espacio sea reducido */
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ============================================
+   NAVEGACIÓN (LISTA DE ENLACES)
+============================================ */
+.nav {
+  flex: 1; /* Ocupa el espacio disponible entre el logo y los íconos/CTA */
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-texto-oscuro);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  padding-bottom: 8px;
+  position: relative; /* Necesario para posicionar el subrayado del link activo */
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--color-rosa);
+}
+
+/* Estado activo: enlace "INICIO" en rosa con línea inferior */
+.nav__link--active {
+  color: var(--color-rosa);
+}
+
+.nav__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-rosa);
+  border-radius: 2px;
+}
+
+/* ============================================
+   ÍCONOS DE REDES SOCIALES
+============================================ */
+.social {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 14px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;              /* Esquinas redondeadas como en la imagen */
+  background-color: var(--color-texto-oscuro);
+  color: #ffffff;                   /* Color del ícono (trazo/relleno del SVG) */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social__link:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-rosa);
+}
+
+.social__link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   BOTÓN CTA "COTIZA TU PROYECTO"
+============================================ */
+.cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--color-rosa);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  padding: 14px 26px;
+  border-radius: 30px;                     /* Forma de píldora */
+  box-shadow: 0 8px 16px var(--color-gris-sombra); /* Sombra suave como en la imagen */
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--color-rosa-oscuro);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE: TABLETS
+============================================ */
+@media (max-width: 992px) {
+  .header__container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav__list {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: MÓVILES
+============================================ */
+@media (max-width: 600px) {
+  .header {
+    padding: 16px 20px;
+  }
+
+  .header__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .social {
+    align-self: flex-start;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

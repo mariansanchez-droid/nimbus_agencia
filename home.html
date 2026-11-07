@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimbus Agencia Creativa - Home</title>
+
+  <!-- Fuente redondeada/bold similar a la del diseño original -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/home.css">
+
+<script src="Javascript/components.js"></script>
+
+
+</head>
+<header> 
+  <div id="header"></div>
+</header>
+
+<body>
+
+  <!-- ================================================= -->
+  <!-- SECCIÓN HERO: título, descripción, botón e imagen -->
+  <!-- ================================================= -->
+  <section class="hero">
+    <div class="hero__container">
+
+      <!-- COLUMNA IZQUIERDA: texto -->
+      <div class="hero__content">
+
+        <!-- Título principal con 3 líneas de distinto color, tal como en la imagen -->
+        <h1 class="hero__title">
+          Convertimos tus ideas
+          <span class="hero__title--pink">en creaciones que</span>
+          <span class="hero__title--orange">destacan.</span>
+        </h1>
+
+        <p class="hero__description">
+          Diseño, impresión y personalización de productos y espacios que
+          impulsan tu marca
+        </p>
+
+        <!-- Garabato decorativo naranja (flecha curva), debajo del párrafo -->
+        <img
+          class="hero__doodle hero__doodle--orange"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'><path d='M5 35 Q15 10 25 30 Q30 42 20 42 Q10 42 15 32 Q25 12 45 20 Q65 28 85 18' fill='none' stroke='%23ffa500' stroke-width='3' stroke-linecap='round'/><path d='M80 10 L90 18 L78 22 Z' fill='%23ffa500'/></svg>"
+          alt=""
+          aria-hidden="true"
+        >
+
+        <a href="productos.html" class="hero__cta">
+          CONOCE NUESTROS SERVICIOS
+          <span class="hero__cta-arrow">›</span>
+        </a>
+      </div>
+
+      <!-- 
+        COLUMNA DERECHA: imagen ilustrativa
+        Ilustración SVG original (no es una foto de stock, evita problemas de derechos)
+        que representa el negocio: diseño gráfico + impresión + corte láser.
+        Si el usuario cuenta con una fotografía real de sus productos/talleres,
+        puede reemplazar este bloque por: <img src="ruta-de-tu-imagen.jpg" alt="...">
+      -->
+      <div class="hero__image">
+        <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroImgTitle">
+          <title id="heroImgTitle">Ilustración de diseño gráfico, impresión y corte láser</title>
+
+          <!-- Fondo circular decorativo -->
+          <circle cx="240" cy="210" r="190" fill="#fff4f9"/>
+          <circle cx="240" cy="210" r="150" fill="#ffe9f3"/>
+
+          <!-- Monitor con diseño gráfico en pantalla -->
+          <g>
+            <rect x="80" y="100" width="220" height="150" rx="10" fill="#1c1c3a"/>
+            <rect x="95" y="114" width="190" height="110" rx="4" fill="#ffffff"/>
+            <!-- Elementos de diseño dentro de la pantalla -->
+            <circle cx="140" cy="150" r="18" fill="#ff5ca8"/>
+            <rect x="170" y="135" width="90" height="14" rx="4" fill="#ffa500"/>
+            <rect x="170" y="155" width="65" height="10" rx="3" fill="#1c1c3a" opacity="0.3"/>
+            <rect x="110" y="185" width="150" height="30" rx="4" fill="#ffe9f3" stroke="#ff5ca8" stroke-width="2"/>
+            <!-- Base del monitor -->
+            <rect x="175" y="250" width="30" height="18" fill="#1c1c3a"/>
+            <rect x="150" y="266" width="80" height="10" rx="4" fill="#1c1c3a"/>
+          </g>
+
+          <!-- Máquina de corte láser (a la derecha) -->
+          <g>
+            <rect x="300" y="150" width="130" height="90" rx="8" fill="#ffffff" stroke="#1c1c3a" stroke-width="3"/>
+            <rect x="315" y="165" width="100" height="45" rx="4" fill="#ffe9f3"/>
+            <!-- Rayo láser -->
+            <line x1="365" y1="165" x2="365" y2="205" stroke="#ff5ca8" stroke-width="3" stroke-dasharray="4 4"/>
+            <!-- Pieza cortada -->
+            <polygon points="355,195 375,195 380,208 350,208" fill="#ffa500"/>
+            <circle cx="415" cy="230" r="5" fill="#ff5ca8"/>
+          </g>
+
+          <!-- Hoja / impresión saliendo (a la izquierda-abajo) -->
+          <g>
+            <rect x="60" y="270" width="90" height="115" rx="6" fill="#ffffff" stroke="#1c1c3a" stroke-width="3"/>
+            <rect x="75" y="288" width="60" height="8" rx="3" fill="#ff5ca8"/>
+            <rect x="75" y="304" width="60" height="6" rx="3" fill="#1c1c3a" opacity="0.25"/>
+            <rect x="75" y="316" width="45" height="6" rx="3" fill="#1c1c3a" opacity="0.25"/>
+            <rect x="75" y="335" width="60" height="35" rx="4" fill="#ffa500" opacity="0.85"/>
+          </g>
+
+          <!-- Regla / escuadra de diseñador -->
+          <g>
+            <rect x="330" y="270" width="100" height="16" rx="3" fill="#ffa500" transform="rotate(-18 330 270)"/>
+          </g>
+
+          <!-- Lápiz -->
+          <g transform="rotate(35 250 340)">
+            <rect x="240" y="300" width="16" height="90" rx="4" fill="#ff5ca8"/>
+            <polygon points="240,300 256,300 248,280" fill="#f2c98a"/>
+            <rect x="240" y="380" width="16" height="10" fill="#1c1c3a"/>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================= -->
+  <!-- FRANJA INFERIOR: "¿Qué podemos crear juntos?" + servicios -->
+  <!-- ======================================================= -->
+  <section class="services">
+    <h2 class="services__title">¿QUE PODEMOS CREAR JUNTOS?</h2>
+    <span class="services__underline"></span>
+
+    <ul class="services__list">
+
+      <li class="services__item">
+        <!-- Ícono: impresora -->
+        <svg class="services__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="9" y="14" width="22" height="14" rx="2" stroke="#ff5ca8" stroke-width="2"/>
+          <rect x="13" y="6" width="14" height="8" stroke="#ff5ca8" stroke-width="2"/>
+          <rect x="13" y="26" width="14" height="10" stroke="#ff5ca8" stroke-width="2"/>
+          <circle cx="25" cy="18" r="1.4" fill="#ff5ca8"/>
+        </svg>
+        <p class="services__text">
+          <strong>IMPRESIONES</strong>
+          de alta calidad
+        </p>
+      </li>
+
+      <li class="services__item">
+        <!-- Ícono: caballete/vinil -->
+        <svg class="services__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 8h16v24l-8 4-8-4V8Z" stroke="#ffa500" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="10" y1="16" x2="26" y2="16" stroke="#ffa500" stroke-width="2"/>
+        </svg>
+        <p class="services__text">
+          <strong>VINILES</strong>
+          y decoración
+        </p>
+      </li>
+
+      <li class="services__item">
+        <!-- Ícono: copa/corte de precisión -->
+        <svg class="services__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 8h16l-2 12a6 6 0 0 1-12 0L12 8Z" stroke="#ff5ca8" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="20" y1="26" x2="20" y2="32" stroke="#ff5ca8" stroke-width="2"/>
+          <line x1="14" y1="34" x2="26" y2="34" stroke="#ff5ca8" stroke-width="2"/>
+        </svg>
+        <p class="services__text">
+          <strong>CORTE LÁSER</strong>
+          precisión y detalle
+        </p>
+      </li>
+
+      <li class="services__item">
+        <!-- Ícono: patrón / producto personalizado -->
+        <svg class="services__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="24" height="24" rx="3" stroke="#ffa500" stroke-width="2"/>
+          <path d="M8 20h24M20 8v24" stroke="#ffa500" stroke-width="1.4" opacity="0.6"/>
+        </svg>
+        <p class="services__text">
+          <strong>PRODUCTOS</strong>
+          personalizados
+        </p>
+      </li>
+
+      <li class="services__item">
+        <!-- Ícono: monitor de diseño gráfico -->
+        <svg class="services__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="9" width="28" height="18" rx="2" stroke="#ff5ca8" stroke-width="2"/>
+          <line x1="14" y1="33" x2="26" y2="33" stroke="#ff5ca8" stroke-width="2"/>
+          <line x1="20" y1="27" x2="20" y2="33" stroke="#ff5ca8" stroke-width="2"/>
+          <path d="M11 22l5-5 3 3 6-7" stroke="#ff5ca8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="services__text">
+          <strong>DISEÑO</strong>
+          gráfico
+        </p>
+      </li>
+
+    </ul>
+  </section>
+    
+    <footer>
+      <div id="footer"></div>
+    </footer>
+
+</body>
+</html>
